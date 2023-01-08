@@ -1,4 +1,4 @@
-var finances = [
+let finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
 ['Mar-2010', 322013],
@@ -86,5 +86,49 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+
+// total number of month
+console.log (finances.length)
+let months = finances.length;
+
+
+// total amount of profit/loss 
+
+// let totalAmount = 0;
+// for (let n of finances)
+// totalAmount += n;
+
+// console.log(totalAmount)
+
+// const totalAmount = finances.reduce((total, item) => {return total + item;}, 0) ;
+
+// console.log(totalAmount)
+
+
+// var text = [5, "hello", 14, 10, "world"] ;
+
+// for (let i = 0; i < 5; i++) {
+    
+// var hello = "5 43 21"
+//     console.log( hello[i])
+    
+// }
+
+
+
+
+
+var totalAmount = 0 ;
+
+for (let i = 0; i < finances.length; i++) {
+    
+    totalAmount = totalAmount + finances[i][1] 
+    // console.log( finances[i][1])
+    console.log(totalAmount,"totalAmount" )
+}
+
+// console.log(typeof finances)
+
 
 
