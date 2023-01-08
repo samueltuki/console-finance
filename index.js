@@ -90,9 +90,8 @@ let finances = [
 // total number of month
 // let months = finances.length;
 
-console.log(finances.length);
 
-// total amount of profit/loss
+// variables
 let totalAmount = 0;
 let largestInc = ["", 0];
 let largestDec = ["", 0];
@@ -118,10 +117,22 @@ for (let i = 0; i < finances.length; i++) {
     }
   }
 }
+let averageChange = totalChanges / (finances.length-1);
 
-col
 
-co;
+console.log("total months: " + finances.length);
+console.log(`total: $${totalAmount}`);
+console.log(`average change : $${averageChange.toFixed(2)}`);
+console.log("largest increase: " + largestInc[0] + " $" + largestInc[1]);
+console.log(`largest decrease: ${largestInc[0]} $${largestInc[1]}`);
+
+
+
+// console.log(finances.reduce((a,b)=> a+b[1],0));
+let numbers = [12, 10, 5, 15]
+ console.log(Math.max(...numbers));
+
+
 
 // let totalAmount = 0;
 // for (let n of finances)
