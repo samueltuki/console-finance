@@ -93,9 +93,14 @@ let finances = [
 
 // variables
 let totalAmount = 0;
-let largestInc = ["", 0];
+let largestInc =["", 0];
 let largestDec = ["", 0];
 let totalChanges = 0;
+
+// let totalAmount = 0;
+// let largestInc = ["", 0];
+// let largestDec = ["", 0];
+// let totalChanges = 0;
 
 for (let i = 0; i < finances.length; i++) {
   totalAmount = totalAmount + finances[i][1];
@@ -103,7 +108,7 @@ for (let i = 0; i < finances.length; i++) {
   // *this helped me to be sure i am isolating the particular index i needed to target in the finances array to get the totalAmount*
 
   if (i > 0) {
-    // assigned changed from the previous months to a variable to reference later
+    // assigned change from the previous months to a variable for later reference
     let monthChange = finances[i][1] - finances[i - 1][1];
     // added current month change to the running total of changes
     totalChanges = totalChanges + monthChange;
@@ -111,7 +116,7 @@ for (let i = 0; i < finances.length; i++) {
     if (monthChange > largestInc[1]) {
       largestInc = [finances[i][0], monthChange];
     }
-    // similar again update largestDec if monthsChange is less than largestDec 
+    // similarly,update largestDec if monthsChange is less than largestDec 
     else if (monthChange < largestDec[1]) {
       largestDec = [finances[i][0], monthChange];
     }
@@ -120,17 +125,35 @@ for (let i = 0; i < finances.length; i++) {
 let averageChange = totalChanges / (finances.length-1);
 
 
-console.log("total months: " + finances.length);
-console.log(`total: $${totalAmount}`);
-console.log(`average change : $${averageChange.toFixed(2)}`);
-console.log("largest increase: " + largestInc[0] + " $" + largestInc[1]);
-console.log(`largest decrease: ${largestInc[0]} $${largestInc[1]}`);
+console.log(`financial statement
+==================================`)
+console.log(`totalAmount: ${finances.length}`);
+console.log(`totalAmount: $${totalAmount}`);
+console.log(`averageChange : $${averageChange.toFixed(2)}`);
+console.log(`largest increase:  ${largestInc[0]} $${largestInc[1]}`);
+console.log(`largest decrease: ${largestDec[0]} $${largestInc[1]}`);
+
+
+
+
+
+
+
+
+
+// CODE TESTING (PLEASE IGNORE!!!!!!)
+// =================================
+// console.log("total months: " + finances.length);
+// console.log(`total: $${totalAmount}`);
+// console.log(`average change : $${averageChange.toFixed(2)}`);
+// console.log("largest increase: " + largestInc[0] + " $" + largestInc[1]);
+// console.log(`largest decrease: ${largestInc[0]} $${largestInc[1]}`);
 
 
 
 // console.log(finances.reduce((a,b)=> a+b[1],0));
-let numbers = [12, 10, 5, 15]
- console.log(Math.max(...numbers));
+// let numbers = [12, 10, 5, 15]
+//  console.log(Math.max(...numbers));
 
 
 
