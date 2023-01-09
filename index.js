@@ -93,20 +93,15 @@ let finances = [
 
 // variables
 let totalAmount = 0;
-let largestInc =["", 0];
+let largestInc = ["", 0];
 let largestDec = ["", 0];
 let totalChanges = 0;
 
-// let totalAmount = 0;
-// let largestInc = ["", 0];
-// let largestDec = ["", 0];
-// let totalChanges = 0;
-
 for (let i = 0; i < finances.length; i++) {
+ // console.log ( finances[i][1])
+  // *assigned totalAmount by adding totalAmount to the second index in the finances array) *
   totalAmount = totalAmount + finances[i][1];
-  // console.log ( finances[i][1])
-  // *this helped me to be sure i am isolating the particular index i needed to target in the finances array to get the totalAmount*
-
+ 
   if (i > 0) {
     // assigned change from the previous months to a variable for later reference
     let monthChange = finances[i][1] - finances[i - 1][1];
@@ -124,6 +119,7 @@ for (let i = 0; i < finances.length; i++) {
 }
 let averageChange = totalChanges / (finances.length-1);
 
+// console log
 
 console.log(`financial statement
 ==================================`)
