@@ -90,44 +90,43 @@ let finances = [
 // total number of month
 // let months = finances.length;
 
-
-// variables
 let totalAmount = 0;
 let largestInc = ["", 0];
 let largestDec = ["", 0];
 let totalChanges = 0;
 
 for (let i = 0; i < finances.length; i++) {
- // console.log ( finances[i][1])
-  // *assigned totalAmount by adding totalAmount to the second index in the finances array) *
   totalAmount = totalAmount + finances[i][1];
- 
+  // console.log ( finances[i][1])
+  // *this helped me to be sure i am isolating the particular index i needed to target in the finances array to get the totalAmount*
+
   if (i > 0) {
     // assigned change from the previous months to a variable for later reference
-    let monthChange = finances[i][1] - finances[i - 1][1];
+    let monthChange = finances[i][1] - finances[i -1][1];
     // added current month change to the running total of changes
     totalChanges = totalChanges + monthChange;
     // if this month change is greater than the value currently stored in largestInc then update largestInc so that it equals the current month
     if (monthChange > largestInc[1]) {
-      largestInc = [finances[i][0], monthChange];
+      largestInc = [finances[i][0],  monthChange];
     }
-    // similarly,update largestDec if monthsChange is less than largestDec 
+    // similar again update largestDec if monthsChange is less than largestDec 
     else if (monthChange < largestDec[1]) {
       largestDec = [finances[i][0], monthChange];
     }
   }
 }
-let averageChange = totalChanges / (finances.length-1);
+let averageChange = totalChanges / (finances.length -1);
 
-// console log
+
+
 
 console.log(`financial statement
 ==================================`)
-console.log(`totalAmount: ${finances.length}`);
-console.log(`totalAmount: $${totalAmount}`);
-console.log(`averageChange : $${averageChange.toFixed(2)}`);
-console.log(`largest increase:  ${largestInc[0]} $${largestInc[1]}`);
-console.log(`largest decrease: ${largestDec[0]} $${largestInc[1]}`);
+console.log(`total months: finances.length`);
+console.log(`total: $${totalAmount}`);
+console.log(`average change : $${averageChange.toFixed(2)}`);
+console.log(`largest increase: ${largestInc[0]} ${largestInc[1]}`);
+console.log(`largest decrease: ${largestDec[0]} $${largestDec[1]}`);
 
 
 
@@ -137,19 +136,27 @@ console.log(`largest decrease: ${largestDec[0]} $${largestInc[1]}`);
 
 
 
-// CODE TESTING (PLEASE IGNORE!!!!!!)
-// =================================
-// console.log("total months: " + finances.length);
-// console.log(`total: $${totalAmount}`);
-// console.log(`average change : $${averageChange.toFixed(2)}`);
-// console.log("largest increase: " + largestInc[0] + " $" + largestInc[1]);
-// console.log(`largest decrease: ${largestInc[0]} $${largestInc[1]}`);
 
 
 
+
+
+
+
+
+
+// PLEASE KINDLY IGNORE THIS SECTION!!!
 // console.log(finances.reduce((a,b)=> a+b[1],0));
 // let numbers = [12, 10, 5, 15]
 //  console.log(Math.max(...numbers));
+
+// console.log(finances.length);
+// console.log(totalAmount);
+// console.log(averageChange.toFixed(2));
+// // toFixed rounds up number to the nearest 2digit
+// console.log("largest increase: " + largestInc[0] + " $" + largestInc[1]);
+// console.log(`largest decrease: ${largestInc[0]} $${largestInc[1]}`);
+
 
 
 
