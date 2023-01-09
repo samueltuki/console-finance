@@ -5,8 +5,8 @@
 }
 
 .financial{
-    width:  700px ;
-    height: 450px;
+    width:  100vmax ;
+    height: 100vh;
     color: rgb(255, 249, 249);
     border-radius: 20px;
     box-shadow: 0, 0, 12, 0;

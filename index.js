@@ -120,7 +120,7 @@ let averageChange = totalChanges / (finances.length -1);
 
 
 
-
+// console logs
 console.log(`financial statement
 ==================================`)
 console.log(`total months: finances.length`);
@@ -146,7 +146,7 @@ console.log(`largest decrease: ${largestDec[0]} $${largestDec[1]}`);
 
 
 
-// PLEASE KINDLY IGNORE THIS SECTION!!!
+// CODE TESTING; PLEASE KINDLY IGNORE THIS SECTION!!!
 // console.log(finances.reduce((a,b)=> a+b[1],0));
 // let numbers = [12, 10, 5, 15]
 //  console.log(Math.max(...numbers));
