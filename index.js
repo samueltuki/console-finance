@@ -123,7 +123,7 @@ let averageChange = totalChanges / (finances.length -1);
 // console logs
 console.log(`financial statement
 ==================================`)
-console.log(`total months: finances.length`);
+console.log(`total months: ${finances.length}`);
 console.log(`total: $${totalAmount}`);
 console.log(`average change : $${averageChange.toFixed(2)}`);
 console.log(`largest increase: ${largestInc[0]} ${largestInc[1]}`);
