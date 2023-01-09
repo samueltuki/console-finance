@@ -96,6 +96,7 @@ let largestDec = ["", 0];
 let totalChanges = 0;
 
 for (let i = 0; i < finances.length; i++) {
+  // added the second item in the finance array to the running  total amount
   totalAmount = totalAmount + finances[i][1];
   // console.log ( finances[i][1])
   // *this helped me to be sure i am isolating the particular index i needed to target in the finances array to get the totalAmount*
